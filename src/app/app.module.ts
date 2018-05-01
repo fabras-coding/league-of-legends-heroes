@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms'; //<-- Ng modules lives here
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroService } from './hero.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     FormsModule // Sempre que importar alguma biblioteca através de metadado,
     // nao se pode esquecer de adicionar no array de imports
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
